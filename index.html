@@ -3,9 +3,161 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Rainbow Taxi l The Right Choice</title>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 </head>
 <body>
+
+<!----------------------------------------ini bagian header---------------------------------------->
     
+<header class="navigation">
+
+
+        <!--logo-->
+        <div class="logo"></div>
+        <p>Rainbow Taxi</p>
+
+        <!--navigasi-->
+        <nav class="menubar">   
+            <a></a>
+            <a></a>
+            <a href="#banner">Home</a>
+            <a href="#aboutus">About Us</a> <!--isinya tentang (kiri) foto dan (kanan) paragraf apa itu website ini dan visi misi-->
+            <a href="#ourprofil">Our Profile</a><!--paragon isinya apa aja, wardah dll-->
+            <a href="#messageus">Message Us!</a>
+        </nav>
+
+
+
+    <div class="menu">
+        <a href="#"><i data-feather="menu"></i></a>
+    </div>
+
+</header>
+
+<!----------------------------------------ini bagian main---------------------------------------->
+
+<main>
+
+    <!--banner-->
+    <section class="banner" id="banner"></section>
+
+    <article class="home">
+        <div class="home-container">
+            <h2>Rainbow Taxi, The Right Choice</h2>
+            <p>RainFren, kami akan menemani perjalananmu ke <span>manapun</span></p>
+            
+            <div class="button">
+                <p>Order</p>
+            </div>
+        </div>
+    </article>
+    
+    <!--about us-->
+    <section class="aboutus" id="aboutus"> <!--tiap menubar ada sectionnya masing masing-->
+        
+        <article class="desc-content">
+            <H3>About Us</H3>
+            <div class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+        </article>
+
+        </header>
+
+    </section>
+
+    <!--our profil-->
+    <section id="ourprofil" class="ourprofil"> <!--tiap menubar ada sectionnya masing masing-->
+        
+        <header>
+            <H3>Our Profil</H3>
+            <p>Know us better</p>
+        </header>
+        
+        <article class="profil">
+            <div class="profil-container">
+                <div class="profil-desc profil-satu"></div>
+                <p>profil 1</p>
+            </div>
+
+            <div class="profil-container">
+                <div class="profil-desc profil-dua"></div>
+                <p>profil 2</p>
+            </div>
+
+            <div class="profil-container">
+                <div class="profil-desc profil-tiga"></div>
+                <p>profil 3</p>
+            </div>
+
+            <div class="profil-container">
+                <div class="profil-desc profil-empat"></div>
+                <p>profil 4</p>
+            </div>
+
+            <div class="profil-container">
+                <div class="profil-desc profil-lima"></div>
+                <p>profil 5</p>
+            </div>
+        </article>
+
+    </section>
+
+
+    <!--contact us-->
+    <section class="messageus" id="messageus">
+
+        <div class="contact-left">
+            <h3>Message Us!</h3>
+        </div>
+        
+        <div class="contact-right">
+            <form>
+                <label for="name"> Nama Lengkap</label>
+                <input type="text" name="name" placeholder="nama lengkap" required>
+                
+                <label for="email"> Email</label>
+                <input type="email" name="email" placeholder="alamat email" required>
+                
+                <label for="date"> Tanggal Lahir</label>
+                <input type="date" name="birth" placeholder="tanggal lahir" required>
+                
+                <label for="sex"> Jenis Kelamin</label>
+                <input type="radio" name="sex" required> Laki-laki 
+                <input type="radio" name="sex" required> Perempuan
+                
+                <label for="name"> Pesan</label>
+                <textarea name="message" rows="5" placeholder="pesanmu"></textarea>
+                
+                <button type="submit" class="button">Submit</button>
+            </form>
+        </div>
+
+    </section>
+
+
+</main>
+
+<!----------------------------------------ini bagian footer---------------------------------------->
+
+<footer>
+
+<div class="footer-info">
+    <div>Company</div>
+    <div>Connect with Us</div>
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
+
+</footer>
+
+<script>
+    feather.replace();
+</script> 
+
 </body>
 </html>
