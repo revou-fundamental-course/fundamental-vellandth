@@ -30,7 +30,6 @@ p{
     text-align: center;
     color: #fbd831;
     padding-left: 10px;
-    padding-top: 15px;
 }
 
 h2{
@@ -49,7 +48,6 @@ h3{
 
 /*logo*/
 .navigation{
-    position: fixed; /*pas ditambahin ini, semua nav jadi mengecil*/
     display: flex; /*biar antaara logo dan menubar kejajar kesamping bukan kebawah*/
     align-items: center; /* biar logo dan menubar di tengah posisi navigation*/
     top: 0; left: 0; right: 0; /*untuk memperbaiki position yang ngerusak semua*/
@@ -81,13 +79,23 @@ h3{
     font-size: 13px;
 }
 
+.navigation .button a {
+    width: 100px;
+    font-size: 15px;
+    color: white;
+    padding: 10px;
+    border-radius: 5%;
+    text-decoration: none;
+    background-color: #f3a80f
+}
+
 /*------------------------main------------------------*/
 
 /*-----------------banner-----------------*/
 
 .banner{
     width: 100%;
-    height: 400px;
+    height: 350px;
     margin-top: 10px;
     background-image: url(../assets/pic1.jpg);
     background-size: cover;
@@ -106,52 +114,53 @@ h3{
     font-size: 10px;
 }
 
-.home-container .button p {
-    width: 100px;
-    font-size: 20px;
-    color: white;
-    padding: 10px;
-    margin-bottom: 150px; /*jarak dengan about us*/
-    border-radius: 10%;
-    background-color: #f3a80f
-}
-
-.home .home-container .button{
-    display: flex;
-    justify-content: center; /*button about us ditengah*/
+.home-container p{
+    margin-bottom: 100px;
 }
 /*-----------------about us-----------------*/
-.aboutus{ /*tteks about us ditengah*/
+.aboutus{ /*teks about us ditengah*/
     text-align: center;
+    height: 100%;
+    width: 100%;
+    border: 1px solid;
+    color: white;
+    padding-bottom: 20px;
+    background-color: #f3a80f;
+    margin-bottom: 100px;
 }
 
-.desc-content{ /*bikin konten di tengah*/
+.aboutus .desc-content{ /*bikin konten di tengah*/
+    display: flex; /* Menggunakan Flexbox */
+    flex-direction: column; /* pake ini biar kotak lorem ipsum di tengah!! */
     color: white;
     align-items: center;
-    justify-content: center;
 }
 
-.desc{ 
+.aboutus .desc-content .desc{ 
     height:100%;
     width: 60%;
     border: 1px solid;
-    border-color: white;
+    border-color: rgb(0, 0, 0);
     text-align: center;
     padding: 10px;
 }
 
 .desc-content h3{
     line-height: 1px; /*jarak about us ke kotak tulisan*/
+    color: rgb(0, 0, 0);
 }
 /*-----------------our profil-----------------*/
 .ourprofil{ /*border profil*/
     height: 100%;
     width: 100%;
     text-align: center;
-    background-color: white;
+    padding: 30px;
+    margin-bottom: 150px;
 }
 
-
+.profil-head h3{
+    line-height: 1px; /*pas header ga bisa, pas diubah jadi article bisa*/
+}
 
 .profil{ /*border profil 12345*/
     display: flex;
@@ -169,7 +178,6 @@ h3{
     width: 150px;
     border-radius: 10%;
     background-size: cover;
-    background-image: url(../assets/logojpg);
 }
 
 .profil-satu{
@@ -191,12 +199,18 @@ h3{
 .profil-lima{
     background-image: url(../assets/p5.jpg);
 }
-/*-----------------our profil-----------------*/
+/*----------------message us-----------------*/
 .messageus{
     display: flex;
     justify-content: space-between;
     width: 100%;
     height: 100%;
+    border: 1px solid;
+    border-color: rgb(255, 255, 255);
+    background-color: #f3a80f;
+    color: red;
+    padding-top: 1px;
+    margin: ;
 }
 
 .messageus .contact-right{
@@ -207,15 +221,21 @@ h3{
 form input, form textarea{
     width: 100%; /*untuk melebarkan text area*/
     border: 1px solid;
-    margin: 10px /*antar textbox*/ 0 /*biar ga keluar margin*/;
+    margin: 10px /*antar textbox*/ 0px /*biar ga keluar margin*/;
     font-size: 12px;
+    background-color: #f7ebd3;
 }
 
-
+.messageus h3{
+    color: black;
+}
 /*-----------------footer-----------------*/
 
 footer{
     width: 100%;
     height: 100%;
     border: 1px solid;
+    border-color: white;
+    color: white;
+    margin-top: 100px;
 }
