@@ -16,28 +16,35 @@
     
 <header class="navigation">
 
-
         <!--logo-->
         <div class="logo"></div>
         <p><b>Rainbow Taxi</b></p>
 
         <!--navigasi-->
-        <nav class="menubar">   
-            <a></a>
-            <a></a>
+    
+        <nav class="menubar">  
+            <a></a> 
+            <a></a> 
             <a href="#banner">Home</a>
-            <a href="#aboutus">About Us</a> <!--isinya tentang (kiri) foto dan (kanan) paragraf apa itu website ini dan visi misi-->
-            <a href="#ourprofil">Our Profile</a><!--paragon isinya apa aja, wardah dll-->
+            <a href="#aboutus">About Us</a> 
+            <a href="#ourprofil">Our Profile</a>
             <a href="#messageus">Message Us!</a>
         </nav>
 
-        <div class="button">
+        <div class="button-order">
             <a href="https://play.google.com/store/search?q=taxi+driver&c=movies&hl=en">Order</a>
         </div>
-
-    <div class="menu">
+    <div class="menu-icon">
         <a href="#"><i data-feather="menu"></i></a>
     </div>
+</div>
+
+    <!--<div class="menu-dropdown">
+        <a href="#banner">Home</a>
+        <a href="#aboutus">About Us</a> 
+        <a href="#ourprofil">Our Profile</a>
+        <a href="#messageus">Message Us!</a>
+    </div>-->
 
 </header>
 
@@ -46,16 +53,28 @@
 <main>
 
     <!--banner-->
-    <section class="banner" id="banner"></section>
+    <section class="banner">
+        <div class="banner-item" style="background-image: url('assets/pic1.jpg')"></div>
+        <div class="banner-item" style="background-image: url('assets/pic2.jpg')"></div>
+        <div class="banner-item" style="background-image: url('assets/pic3.png')"></div>       
+        <div class="banner-item" style="background-image: url('assets/pic4.png')"></div>
+        <div class="banner-item" style="background-image: url('assets/pic5.png')"></div>
+            
+        <div class="button-banner">
+            <a  class="prev" onclick="nextSlide(1)">Next</a>
+        </div>
+
+
+    </section>
+
 
     <article class="home">
         <div class="home-container">
             <h2>Rainbow Taxi, The Right Choice</h2>
-            <p>RainFren, kami akan menemani perjalananmu ke <span>manapun</span></p>
-            
+            <p>Hallo, <span id="welcome-title"></span>! dengan senang hati kami akan menemani perjalananmu ke manapun</p>
         </div>
     </article>
-    
+
     <!--about us-->
     <section class="aboutus" id="aboutus"> <!--tiap menubar ada sectionnya masing masing-->
         
@@ -107,33 +126,51 @@
     </section>
 
 
-    <!--contact us-->
+    <!--message us-->
     <section class="messageus" id="messageus">
-
-        <div class="contact-left">
-            <h3>Message Us!</h3>
-        </div>
         
-        <div class="contact-right">
-            <form>
-                <label for="name"> Nama Lengkap</label>
-                <input type="text" name="name" placeholder="nama lengkap" required>
+        <div class="messageus-container">
+            <h3>Message Us!</h3>
+            <form class="form-user">
+                <div class="messageus-quetion">
+                    <label for="name"> Nama Lengkap</label>
+                    <input type="text" id="name" placeholder="nama lengkap" required>
+                </div>
                 
-                <label for="email"> Email</label>
-                <input type="email" name="email" placeholder="alamat email" required>
-                
-                <label for="date"> Tanggal Lahir</label>
-                <input type="date" name="birth" placeholder="tanggal lahir" required>
-                
-                <label for="sex"> Jenis Kelamin</label>
-                <input type="radio" name="sex" required> Laki-laki 
-                <input type="radio" name="sex" required> Perempuan
-                
-                <label for="name"> Pesan</label>
-                <textarea name="message" rows="5" placeholder="pesanmu"></textarea>
-                
-                <button type="submit" class="button">Submit</button>
+                <div class="messageus-quetion">
+                    <label for="email"> Email</label>
+                    <input type="email" id="email" placeholder="alamat email" required>
+                </div>
+
+                <div class="messageus-quetion">
+                    <label for="birth"> Tanggal Lahir</label>
+                    <input type="date" id="birth" placeholder="tanggal lahir" required>
+                </div>
+
+                <div class="messageus-quetion">
+                    <label for="message"> Pesan</label>
+                    <textarea id="message" rows="5" placeholder="pesanmu"></textarea>
+                </div>
+
+                <div class="button-message">
+                    <div class="messageus-quetion">
+                        <button class="button-message-style" type="button" onclick="validateForm()">Kirim pesan!</button>
+                    </div>
+
+                    <div class="messageus-quetion">
+                        <button  class="button-message-style" type="button" onclick="newMessage()">Buat pesan baru</button>
+                    </div>
+                </div>
+
             </form>
+        </div>
+
+        <div class="messageus-answer" id="result">
+            <h4>Detail Pesan yang Telah Terkirim</h5>
+                <p id="nameResult">Nama Lengkap: </p>
+                <p id="emailResult">Email: </p>
+                <p id="birthResult">Tanggal Lahir: </p>
+                <p id="messageResult">Pesan: </p>
         </div>
 
     </section>
@@ -144,20 +181,50 @@
 <!----------------------------------------ini bagian footer---------------------------------------->
 
 <footer>
+    <div class="footer-container">
+        
+            <div class="footer-item">
+    
+                <div class="col">
+                    <ul>                    
+                        <li><h4>Menu Link</h4></li>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#aboutus">About Us</a></li>
+                        <li><a href="#ourprofil">Our Profil</a></li>
+                        <li><a href="#messageus">Message Us</a></li>
+                        <li><a href="https://play.google.com/store/search?q=taxi+driver&c=movies&hl=en">Order</a></li>
+                    </ul>
+                </div>
 
-<div class="footer-info">
-    <div>Company</div>
-    <div>Connect with Us</div>
-    <div></div>
-    <div></div>
-    <div></div>
-</div>
 
-</footer>
+                <div class="col">
+                    <ul>
+                        <li><h4>Information</h4></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Term & Conditions</a></li>
+                    </ul>
+                </div>
+    
+                <div class="col">
+                    <h4>Connect with Me!</h4>
+                    <div class="social">
+                        <a href="https://www.linkedin.com/in/vellanindhita-noorprameswari-yudoyono/"><i data-feather="linkedin"></i></a>
+                        <a href="https://www.instagram.com/vellandth/"><i data-feather="instagram"></i></a>
+                        <a href="https://github.com/vellandth"><i data-feather="github"></i></a>
+                    </div>
+                </div> 
+    
+                
+            </div>
+        
+    </div>
 
 <script>
     feather.replace();
 </script> 
+
+<script src="js/script.js"></script>
 
 </body>
 </html>
